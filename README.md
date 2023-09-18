@@ -6,17 +6,7 @@ The setup is based on
 [this tutorial](https://rustwasm.github.io/docs/wasm-pack/prerequisites/index.html),
 but an excerpt follows below.
 
-Install rust and then wasm-pack:
-
-```bash
-curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-```
-
-Install [nvm](https://github.com/nvm-sh/nvm):
-
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-```
+### just (optional)
 
 Optionally, you may install [just](https://just.systems/man/en/), which is
 essentially a modernized makefile. It is not required, but it is convenient.
@@ -27,14 +17,38 @@ to see all available recipes:
 ![just recipes](./docs/just-recipes.png 'just recipes')
 (just recipes as of 18-Sep-2023)
 
+After installing `just`, you can run `just init` to run a quick scan of your
+system, install Node packages, & get a list of remaining developer tasks
+necessary to get started working on this repo.
+
+Or, manually walk through each step, below.
+
+### rust & wasm-pack
+
+Install rust and then wasm-pack:
+
+```bash
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
+
+### nvm
+
+Install [nvm](https://github.com/nvm-sh/nvm):
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
 Follow any extra instructions from the script and restart your terminal. Then run:
 
 ```bash
-nvm install v16.13.2
-nvm use
+nvm install v16.13.2 && nvm use
 ```
 
-You don't need to specify the version since it is set by the `.nvmrc` file.
+Whenever your CWD is this repo, then you do not need to specify the version
+that nvm should use since it is set by the `.nvmrc` file.
+
+### npm & install
 
 Install npm and then run:
 
@@ -43,6 +57,8 @@ npm install
 # OR
 just init
 ```
+
+## Run development server
 
 To start a web server that auto-reloads on changes, run:
 
