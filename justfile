@@ -11,8 +11,6 @@
 # BASICS
 # ------------------------------------------------------------------------------
 
-# TODO: add check for all installations (rust, npm, nvm/n, wasm-pack, etc.),
-#       and auto-install anything missing.
 # Initialize the repo. Necessary after initial git-clone.
 @init:
     npm install
