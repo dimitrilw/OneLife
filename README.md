@@ -130,4 +130,6 @@ npx prettier \
     $(git diff --name-only --diff-filter=ACM) \
     $(git diff --cached --name-only --diff-filter=ACM) \
     --write --ignore-unknown
+# OR
+just lint-js
 ```

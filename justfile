@@ -28,9 +28,12 @@
 # Lint all code.
 @lint: lint-js lint-rs
 
-# Only lint the JavaScript code via eslint.
+# Only lint (and fix) the JavaScript code via prettier.
 @lint-js:
-    eslint --ext .js,.vue --ignore-path .gitignore --fix js
+    npx prettier \
+        $(git diff --name-only --diff-filter=ACM) \
+        $(git diff --cached --name-only --diff-filter=ACM) \
+        --write --ignore-unknown
 
 # Only lint the Rust code via Clippy.
 @lint-rs:
