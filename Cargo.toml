@@ -86,4 +86,5 @@ vergen = { version = "8.0.0", features = [
 
 # These crates are used for running unit tests.
 [dev-dependencies]
+wasm-bindgen-cli = "0.2"
 wasm-bindgen-test = "0.3"
