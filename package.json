@@ -12,7 +12,7 @@
     "start:dist": "npm run build && python3 -m http.server 8000 --directory dist",
     "test": "cargo test && wasm-pack test --headless",
     "test:node": "WASM_BINDGEN_TEST_TIMEOUT=60 wasm-pack test --node",
-    "lint": "npx prettier $(git diff --name-only --diff-filter=ACM) $(git diff --cached --name-only --diff-filter=ACM) --write --ignore-unknown"
+    "lint": "npx prettier --write ."
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
