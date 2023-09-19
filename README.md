@@ -73,7 +73,7 @@ just dev
 Run:
 
 ```bash
-npm run start:dist
+npm run start-dist
 # OR
 just start-dist
 ```
@@ -101,7 +101,7 @@ just publish
 Run all tests:
 
 ```bash
-npm run test:node
+npm run test-node
 # OR
 just test-node
 ```
@@ -111,7 +111,7 @@ That command is an alias for `WASM_BINDGEN_TEST_TIMEOUT=60 wasm-pack test --node
 Or run a specific test file:
 
 ```bash
-npm run test:node -- --test tier_0 --test tier_1
+npm run test-node -- --test tier_0 --test tier_1
 # OR
 just test-node tier_0 tier_1
 ```
@@ -137,6 +137,8 @@ Please run the following before committing:
 
 ```bash
 npx prettier --write .
+# OR
+npm run lint-js
 ```
 
 Or a faster version:

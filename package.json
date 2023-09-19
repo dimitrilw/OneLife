@@ -9,10 +9,10 @@
     "clean": "rimraf dist pkg",
     "build": "npm run clean && webpack",
     "start": "npm run clean && webpack-dev-server --open -d",
-    "start:dist": "npm run build && python3 -m http.server 8000 --directory dist",
+    "start-dist": "npm run build && python3 -m http.server 8000 --directory dist",
     "test": "cargo test && wasm-pack test --headless",
-    "test:node": "WASM_BINDGEN_TEST_TIMEOUT=60 wasm-pack test --node",
-    "lint": "npx prettier --write ."
+    "test-node": "WASM_BINDGEN_TEST_TIMEOUT=60 wasm-pack test --node",
+    "lint-js": "npx prettier --write ."
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
